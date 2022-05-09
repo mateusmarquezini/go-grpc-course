@@ -5,6 +5,10 @@ package calculator;
 option go_package = "github.com/mateusmarquezini/grpc-go-course/calculator/proto";
 
 import "sum.proto";
+import "avg.proto";
+
+
 service CalculatorService {
   rpc Sum(SumRequest) returns (SumResponse);
+  rpc CalculateAvg(stream AvgRequest) returns (AvgResponse);
 }
